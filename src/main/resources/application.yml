@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: EventAPI
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_eventAPI
+    username: postgres
+    password: postgre
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+
+  flyway:
+    enabled: true
