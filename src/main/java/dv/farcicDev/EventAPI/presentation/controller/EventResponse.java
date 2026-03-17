@@ -1,10 +1,12 @@
-package dv.farcicDev.EventAPI.infra.dtos.request;
-
+package dv.farcicDev.EventAPI.presentation.controller;
 import dv.farcicDev.EventAPI.core.domain.TypeEnum;
+import lombok.Builder;
 
 import java.time.LocalDateTime;
+@Builder
+public record EventResponse(
 
-public record EventRequest(
+        Long id,
         String name,
         String description,
         String identificador,
@@ -13,5 +15,6 @@ public record EventRequest(
         String location,
         String organizer,
         TypeEnum enumtype
+
 ) {
 }

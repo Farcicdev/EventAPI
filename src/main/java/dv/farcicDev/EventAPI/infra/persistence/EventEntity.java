@@ -1,4 +1,4 @@
-package dv.farcicDev.EventAPI.infra.persistence.entity;
+package dv.farcicDev.EventAPI.infra.persistence;
 
 import dv.farcicDev.EventAPI.core.domain.TypeEnum;
 import jakarta.persistence.*;
