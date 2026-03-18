@@ -1,4 +1,4 @@
-package dv.farcicDev.EventAPI.infra.gateway;
+package dv.farcicDev.EventAPI.infra.gateways;
 
 import dv.farcicDev.EventAPI.core.domain.Event;
 import dv.farcicDev.EventAPI.infra.persistence.EventEntity;

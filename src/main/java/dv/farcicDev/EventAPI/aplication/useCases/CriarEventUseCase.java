@@ -1,4 +1,4 @@
-package dv.farcicDev.EventAPI.core.useCases;
+package dv.farcicDev.EventAPI.aplication.useCases;
 
 import dv.farcicDev.EventAPI.core.domain.Event;
 
