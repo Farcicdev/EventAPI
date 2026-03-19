@@ -1,10 +1,7 @@
 package dv.farcicDev.EventAPI.infra.beanConfig;
 
 import dv.farcicDev.EventAPI.aplication.gateways.EventGateway;
-import dv.farcicDev.EventAPI.aplication.useCases.CriarEventUseCase;
-import dv.farcicDev.EventAPI.aplication.useCases.CriarEventUseCaseImpl;
-import dv.farcicDev.EventAPI.aplication.useCases.ListEventUseCase;
-import dv.farcicDev.EventAPI.aplication.useCases.ListEventUseCaseImpl;
+import dv.farcicDev.EventAPI.aplication.useCases.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -20,5 +17,11 @@ public class ConfigEventBean {
     public ListEventUseCase listarEventos(EventGateway gateway){
         return new ListEventUseCaseImpl(gateway);
     }
+
+    @Bean
+    public BuscarPorIdentificadorUseCase buscarPorIdentificadorUseCase(EventGateway gateway){
+        return new BuscarPorIdentificadorImpl(gateway);
+    }
+
 
 }

@@ -1,7 +1,6 @@
 package dv.farcicDev.EventAPI.aplication.useCases;
 
 import dv.farcicDev.EventAPI.aplication.exeption.EventAlreadyExistsException;
-import dv.farcicDev.EventAPI.aplication.exeption.EventNotFoundExeption;
 import dv.farcicDev.EventAPI.aplication.gateways.EventGateway;
 import dv.farcicDev.EventAPI.core.domain.Event;
 
@@ -16,7 +15,7 @@ public class CriarEventUseCaseImpl implements CriarEventUseCase {
     @Override
     public Event execute(Event event) {
 
-        if(gateway.existsByIdentificador(event.identificador())){
+        if (gateway.existsByIdentificador(event.identificador())) {
 
             throw new EventAlreadyExistsException("Evento ja cadastrado");
 
