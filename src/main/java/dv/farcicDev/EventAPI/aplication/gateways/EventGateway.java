@@ -9,6 +9,8 @@ public interface EventGateway {
     Event criarEvento(Event event);
 
     List<Event> findAll();
+
+    boolean existsByIdentificador(String identificador);
 }
 
 

@@ -15,6 +15,6 @@ public class ListEventUseCaseImpl implements ListEventUseCase {
 
     @Override
     public List<Event> execute() {
-        return null;
+        return gateway.findAll();
     }
 }

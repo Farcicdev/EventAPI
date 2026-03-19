@@ -35,5 +35,10 @@ public class EventRepositoryGateway implements EventGateway {
 
     }
 
+    @Override
+    public boolean existsByIdentificador(String identificador) {
+        return repositoryJpa.existsByIdentificador(identificador);
+    }
+
 
 }

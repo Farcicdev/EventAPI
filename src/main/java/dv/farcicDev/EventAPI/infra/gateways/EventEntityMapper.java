@@ -30,6 +30,7 @@ public class EventEntityMapper {
                 .startAt(event.startAt())
                 .endAt(event.endAt())
                 .location(event.location())
+                .organizer(event.organizer())
                 .enumtype(event.enumtype())
                 .build();
     }
