@@ -11,7 +11,7 @@ public class EventDTOMapper {
                 null,
                 request.name(),
                 request.description(),
-                request.identificador(),
+                null,
                 request.startAt(),
                 request.endAt(),
                 request.location(),
