@@ -7,15 +7,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout code
-      uses: actions/setup-java@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Configure Java
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        destribution: 'temurin'
+      - name: Configure Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
 
-    - name: Build Project
-      run: mvn clean install
+      - name: Build Project
+        run: mvn clean install
