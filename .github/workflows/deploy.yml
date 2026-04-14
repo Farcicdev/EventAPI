@@ -20,3 +20,17 @@ jobs:
 
       - name: Build Project
         run: mvn clean install -DskipTests
+
+
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: 22
+          script: |
+            cd /home/ubuntu/EventApi
+            git pull origin main
+            docker compose down
+            docker compose up -d --build
