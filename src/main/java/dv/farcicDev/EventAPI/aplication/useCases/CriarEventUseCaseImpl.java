@@ -1,6 +1,5 @@
 package dv.farcicDev.EventAPI.aplication.useCases;
 
-import dv.farcicDev.EventAPI.aplication.exeption.EventAlreadyExistsException;
 import dv.farcicDev.EventAPI.aplication.gateways.EventGateway;
 import dv.farcicDev.EventAPI.core.domain.Event;
 
@@ -16,7 +15,7 @@ public class CriarEventUseCaseImpl implements CriarEventUseCase {
 
     @Override
     public Event execute(Event event) {
-        String identificador = gerarIdentificador();
+        String identificador = identificadorUnico();
 
         Event novoEvento = new Event(
                 event.id(),
@@ -29,12 +28,6 @@ public class CriarEventUseCaseImpl implements CriarEventUseCase {
                 event.organizer(),
                 event.enumtype()
         );
-
-        if (gateway.existsByIdentificador(event.identificador())) {
-
-            throw new EventAlreadyExistsException("Evento ja cadastrado");
-
-        }
 
         return gateway.criarEvento(novoEvento);
     }
